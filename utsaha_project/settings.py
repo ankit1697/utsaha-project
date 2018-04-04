@@ -156,3 +156,10 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 #Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
+
+try:
+    from .local_settings import *
+except ImportError:
+    STATIC_URL = 'https://cdn.bmsit.ac.in'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+    STATICFILES_DIRS = [STATIC_DIR, ]

@@ -22,6 +22,18 @@ class User(AbstractUser):
 	department = models.ForeignKey("Department", on_delete=models.CASCADE, null=True)
 	amount = models.DecimalField(default=0.0, max_digits=50, decimal_places=2, null=True)
 
+	def is_admin(self):
+		return self.groups.filter(name='Admin').exists()
+
+	def is_finance(self):
+		return self.groups.filter(name='Finance').exists()
+
+	def is_event_coordinator(self):
+		return self.groups.filter(name='Event Coordinator').exists()
+
+	def is_marketing_coordinator(self):
+		return self.groups.filter(name='Marketing Coordinator').exists()
+
 
 class Category(models.Model):
 	name = models.CharField(max_length=50)
@@ -42,7 +54,7 @@ class Event(models.Model):
 	date = models.DateField()
 	time = models.TimeField()
 	venue = models.CharField(max_length=50)
-
+	total_count = models.PositiveIntegerField(default=0)
 	# max registrations per event and whether or not to enforce that
 	max_count = models.PositiveIntegerField(help_text="Max no. of registrations in an event")
 	is_enforced = models.BooleanField()
@@ -83,6 +95,7 @@ class Registration(models.Model):
 		if not self.pk:
 			if self.event.is_enforced:
 				self.event.max_count -= 1
+				self.event.total_count += 1
 				self.event.save()
 		super(Registration, self).save(*args, **kwargs)
 		

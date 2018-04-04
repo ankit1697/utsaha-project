@@ -11,48 +11,34 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <!--li>
-                        <a href="./user.html">
-                            <i class="material-icons">person</i>
-                            <p>User Profile</p>
-                        </a>
-                    </li-->
-                    <!--li>
-                        <a href="./table.html">
-                            <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
-                        </a>
-                    </li-->
                     <li>
                         <a href="{% url "marketing_register" %}">
                             <i class="material-icons">library_books</i>
                             <p>Register</p>
                         </a>
                     </li>
-                    <!--li>
-                        <a href="./icons.html">
-                            <i class="material-icons">bubble_chart</i>
-                            <p>Icons</p>
-                        </a>
-                    </li-->
+                    {% if user.is_admin or user.is_finance %}
                     <li>
                         <a href="{% url "finance" %}">
                             <i class="material-icons">location_on</i>
                             <p>Finance</p>
                         </a>
                     </li>
+                    {% endif %}
                     <li>
                         <a href="{% url "category_list" %}">
                             <i class="material-icons text-gray">event</i>
                             <p>Events</p>
                         </a>
                     </li>
+                    {% if user.is_admin or user.is_event_coordinator %}
                     <li>
                         <a href="{% url "event_scanner" %}">
                             <i class="material-icons text-gray">scanner</i>
                             <p>Scan</p>
                         </a>
                     </li>
+                    {% endif %}
                     <li class="active-pro active">
                         <a target="blank" href="https://www.devxlabs.co">
                             <img width="30" src="https://www.bmsit.ac.in/devx.png">
