@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+           {% include "partials/navbar.html" %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Leaderboard</h4>
+                                    <p class="category">See where you stand</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table">
+                                        <thead class="text-primary">
+                                            <th>Rank</th>
+                                            <th>Name</th>
+                                            <th>Amount Collected</th>
+                                        </thead>
+                                        <tbody>
+                                            {% for lead in leaderboards %}
+                                            <tr>
+                                                <td>{{forloop.counter}}</td></td>
+                                                <td><span style="text-transform:capitalize;">{{lead.agent__username}}</span></td>
+                                                <td>{{lead.sum}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block head %}
+	<style>
+		body {
+			overflow:hidden;
+			background:black;
+		}
+	</style>
+{% endblock head %}
+
+{% block content %}
+<canvas style="position:absolute;" id="c"></canvas>
+<div style="position:relative;z-index:1000;" class="container">
+<h1 style="color:#f5f5f5;">Login</h1>
+	<div class="contact-form">
+	 <div class="signin">
+     <form method="post">{% csrf_token %}
+	      <input style="background:white;" type="text" class="user" id="id_username" name="username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Here';}" />
+	      <input style="background:white;"  type="password" class="pass" id="id_password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
+          <input type="submit" value="Submit" />
+	 </form>
+	 </div>
+	</div>
+</div>
+<script type="text/javascript">
+	var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+//making the canvas full screen
+c.height = screen.height;
+c.width = screen.width;
+
+//chinese characters - taken from the unicode charset
+var chinese = "UTSAHA 2018";
+//converting the string into an array of single characters
+chinese = chinese.split("");
+
+var font_size = 10;
+var columns = c.width/font_size; //number of columns for the rain
+//an array of drops - one per column
+var drops = [];
+//x below is the x coordinate
+//1 = y co-ordinate of the drop(same for every drop initially)
+for(var x = 0; x < columns; x++)
+	drops[x] = 1; 
+
+//drawing the characters
+function draw()
+{
+	//Black BG for the canvas
+	//translucent BG to show trail
+	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+	ctx.fillRect(0, 0, c.width, c.height);
+	
+	ctx.fillStyle = "#0F0"; //green text
+	ctx.font = font_size + "px arial";
+	//looping over drops
+	for(var i = 0; i < drops.length; i++)
+	{
+		//a random chinese character to print
+		var text = chinese[Math.floor(Math.random()*chinese.length)];
+		//x = i*font_size, y = value of drops[i]*font_size
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
+		
+		//sending the drop back to the top randomly after it has crossed the screen
+		//adding a randomness to the reset to make the drops scattered on the Y axis
+		if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			drops[i] = 0;
+		
+		//incrementing Y coordinate
+		drops[i]++;
+	}
+}
+
+setInterval(draw, 33);
+
+
+
+
+</script>
+
+{% endblock %}

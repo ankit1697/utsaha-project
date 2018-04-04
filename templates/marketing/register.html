@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+           {% include "partials/navbar.html" %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">BMSIT Utsaha 2018</h4>
+                                    <p class="category">Register</p>
+                                </div>
+                                <div class="card-content">
+                                    {% for message in messages %}
+                                      <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {{ message }}
+                                      </div>
+                                    {% endfor %}
+                                    <form method="post">{% csrf_token %}
+                                        <div class="form-group col-sm-12 col-md-12">
+											{{ form.name.label_tag }}
+											{% render_field form.name class="form-control" %}
+										</div>
+                                        <div class="form-group col-sm-12 col-md-12">
+											{{ form.email.label_tag }}
+											{% render_field form.email class="form-control" %}
+										</div>
+                                        <div class="form-group col-sm-12 col-md-12">
+											{{ form.phone_no.label_tag }}
+											{% render_field form.phone_no class="form-control" %}
+										</div>
+                                        <div class="form-group col-sm-12 col-md-12">
+											{{ form.event.label_tag }}
+											{% render_field form.event class="form-control" %}
+										</div>
+                                        <div class="form-group col-sm-12 col-md-12">
+											{{ form.college.label_tag }}
+											{% render_field form.college class="form-control" %}
+										</div>
+                                       	<div class="form-group col-sm-12 col-md-12">
+											{{ form.payment.label_tag }}
+											{% render_field form.payment class="form-control" %}
+										</div>
+                                        <button type="submit" class="btn btn-primary pull-right">Register</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center><div id="myModal" style="text-align:center;" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <img style="width:70%;" src="{% static "img/qr.jpeg" %}">
+	      </div>
+	    </div>
+
+	  </div>
+	</div></center>
+    <script>
+    $(function() {
+    	$('select').on('change', function (e) {
+		    var optionSelected = $("option:selected", this);
+		    var valueSelected = this.value;
+		    if(valueSelected == 'paytm') {
+		    	$('#myModal').modal('show');
+		    }
+		});
+    })
+    </script>
+{% endblock %}

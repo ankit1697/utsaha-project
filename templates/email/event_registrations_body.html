@@ -1,0 +1,19 @@
+{% load qr_tags %}
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+Hey, {{registration.name}}<br><br>
+
+You have registered for the event {{registration.event.name}}
+
+<p><object type="image/svg+xml" data="https://www.bmsit.ac.in/utsaha_calendar.svg" width="190">
+    Your browser does not support SVG
+</object> {{registration.event.date}} &nbsp; {{registration.event.time}}</p>
+<p><object data="https://www.bmsit.ac.in/utsaha_place.svg" type="image/svg+xml">
+	Your browser does not support SVG
+</object> {{registration.event.venue}}</p>
+
+<p><center>Scan the QR Code for the experience of a lifetime <br>
+{% qr_from_text registration.code %} <br>
+Or use the code {{registration.code}}
+</center></p>

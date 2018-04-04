@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        {% include "partials/navbar.html" %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Expenses</h4>
+                                    <p class="category">Where all the money went</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table">
+                                        <thead class="text-primary">
+                                            <th>Payee</th>
+                                            <th>Payor</th>
+                                            <th>Date</th>
+                                            <th>Mode Of Payment</th>
+                                            <th>Income / Expense</th>
+                                        </thead>
+                                        <tbody>
+                                            {% for fin in finances %}
+                                            <tr  style={% if fin.income == True %} "color:#477f30;" {% else %} "color:red"; {% endif %}>
+                                                <td>{{fin.payor}}</td>
+                                                <td>{{fin.payee}}</td>
+                                                <td>{{fin.date}}</td>
+                                                <td>{{fin.mode_of_payment}}</td>
+                                                <td class={% if fin.income == True %} "income" {% else %} "expense" {% endif %} data-value="{{fin.amount}}">{{fin.amount}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card" id="total">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Total Income / Expenses</h4>
+                                    <p class="category">Where all the money went</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <div class="col-md-4">
+                                    <p>Total Income: <span style="color:#477f30;" id="total_income"></span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Total Expense: <span style="color:red;" id="total_expense"></span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Balance: <span id="balance"></span></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var total_income = 0;
+            var total_expense = 0;
+            $('.income').each(function() {
+                total_income += parseInt($(this).attr('data-value'));
+            })
+             $('.expense').each(function() {
+                total_expense += parseInt($(this).attr('data-value'));
+            })
+            $('#total_income').append(total_income)
+            $('#total_expense').append(total_expense)
+            balance = total_income - total_expense;
+            if(balance < 0) {
+                $('#balance').css('color', 'red')    
+            }
+            else {
+                $('#balance').css('color', '#477f30') 
+            }
+            $('#balance').append(total_income - total_expense)
+        })
+    </script>
+{% endblock %}

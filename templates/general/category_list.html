@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        {% include "partials/navbar.html" %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header" data-background-color="purple">
+                            <h4 class="title">Event Categories</h4>
+                            <p class="category"></p>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                {% for cat in categories %}
+                                <div class="col-md-6">
+                                    <a href="{% url "event_list" pk=cat.pk %}"><div class="alert alert-info">
+                                        <span>{{cat.name}}</span>
+                                    </div></a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
