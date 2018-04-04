@@ -71,8 +71,8 @@ MIDDLEWARE = [
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'feedback@bmsit.in'
-EMAIL_HOST_PASSWORD = 'Feedback@01'
+EMAIL_HOST_USER = 'bmsitutsaha2018@gmail.com'
+EMAIL_HOST_PASSWORD = 'utsaha2018'
 EMAIL_USE_TLS = True
 
 ROOT_URLCONF = 'utsaha_project.urls'
