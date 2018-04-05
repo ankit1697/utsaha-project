@@ -36,7 +36,7 @@ class RegistrationView(CreateView):
 		send_mail(subject, email, "bmsitutsaha2018@gmail.com" , [registration.email,], fail_silently=False,
 			html_message=email)
 		phone1 = registration.phone_no
-		message = 'Hey, ' + registration.name + '. You\'ve registered for ' + registration.event.name + '. Your registration code is ' + registration.code + '. Venue : ' + registration.event.venue + ' Time : ' + str(registration.event.time) + 'You can also scan the QR Code sent to your email while attending the event. Enjoy!'
+		message = 'Hey, ' + registration.name + '. You\'ve registered for ' + registration.event.name + '. Your registration code is ' + registration.code + '. Venue : ' + registration.event.venue + ' Time : ' + str(registration.event.time) + ' You can also scan the QR Code sent to your email while attending the event. Enjoy!'
 		params = { 'number' : phone1, 'text' : message }
 		baseUrl = 'https://www.smsgatewayhub.com/api/mt/SendSMS?APIKey=62sxGWT6MkCjDul6eNKejw&senderid=BMSITM&channel=2&DCS=0&flashsms=0&' + ap.urlencode(params)
 		urllib.request.urlopen(baseUrl).read(1000)

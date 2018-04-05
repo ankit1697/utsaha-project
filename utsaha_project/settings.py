@@ -72,7 +72,7 @@ MIDDLEWARE = [
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bmsitutsaha2018@gmail.com'
-EMAIL_HOST_PASSWORD = 'utsaha2018'
+EMAIL_HOST_PASSWORD = 'Bms.utsaha18'
 EMAIL_USE_TLS = True
 
 ROOT_URLCONF = 'utsaha_project.urls'
