@@ -40,8 +40,6 @@ AUTH_USER_MODEL = 'general.User'
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',
-    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -74,6 +72,7 @@ MIDDLEWARE = [
 
 admin.site.site_header = 'Utsaha Administration'
 
+JET_DEFAULT_THEME = 'light-violet'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
