@@ -29,6 +29,24 @@ class UserAdmin(DjangoUserAdmin):
 
 
 admin.site.register(Department)
-admin.site.register(Event)
 admin.site.register(Category)
-admin.site.register(Registration)
+
+class EventAdmin(admin.ModelAdmin):
+    '''
+        Admin View for Event
+    '''
+    list_display = ('name', 'price', 'coordinator')
+    list_filter = ('price', 'date',)
+    search_fields = ('name',)
+
+admin.site.register(Event, EventAdmin)
+
+class RegistrationAdmin(admin.ModelAdmin):
+    '''
+        Admin View for Registration
+    '''
+    list_display = ('event', 'payment', 'agent')
+    list_filter = ('event__date','payment')
+    search_fields = ('agent','event',)
+
+admin.site.register(Registration, RegistrationAdmin)
