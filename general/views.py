@@ -17,7 +17,7 @@ class DashboardView(TemplateView):
     template_name = "marketing/dashboard.html"
     def get_context_data(self, **kwargs):
         context = super(DashboardView, self).get_context_data(**kwargs)
-        leaderboard = Registration.objects.values('agent__username',).annotate(sum=Sum('event__price')).order_by('-sum')[:10]
+        leaderboard = Registration.objects.values('agent__username',).annotate(sum=Sum('event__price')).order_by('-sum')
         context['leaderboards'] = leaderboard
         return context
 

@@ -64,100 +64,99 @@
             </div>
         </div>
     </div>
-    // <script>
-    // $(function() {
-
-    //     total_count();
-    //     $('#mode_select').change(function() {
-    //         mode = 0;
-    //         j = 0;
-    //         var value = $(this).val();
-    //         $('#clear').show();
-    //         if(value == "all") {
-    //             $('.table > tbody > tr').show();
-    //             total_count();
-    //         }
-    //         else {
-    //             $('tr').each(function() {
-    //                 if(j > 0) {
-    //                     if($(this).attr('data-mode') != value) {
-    //                         $(this).hide();
-    //                         $(this).removeClass('abc');
-    //                         $(this).addClass('hide');
-    //                     }
-    //                 }
-    //                 j++;
-    //             })
-    //         }
-    //         total_count();
-    //     })
-    //     $('#agent_select').change(function() {
-    //         agent = 0;
-    //         k = 0;
-    //         var value = $(this).val();
-    //         $('#clear').show();
-    //         if(value == "all") {
-    //             $('.table > tbody > tr').show();
-    //             total_count();
-    //         }
-    //         else {
-    //             $('tr').each(function() {
-    //                 if(k > 0) {
-    //                     if($(this).attr('data-name') != value) {
-    //                         $(this).hide();
-    //                         $(this).removeClass('abc');
-    //                         $(this).addClass('hide');
-    //                     }
-    //                 }
-    //                 k++;
-    //             })
-    //             total_count();
-    //         }
-    //     })
-    //     $('#date_select').change(function() {
-    //         date = 0;
-    //         l = 0;
-    //         var value = $(this).val();
-    //         $('#clear').show();
-    //         if(value == "all") {
-    //             $('.table > tbody > tr').show();
-    //             total_count();
-    //         }
-    //         else {
-    //             $('tr').each(function() {
-    //                 if(l > 0) {
-    //                     if($(this).attr('data-date') != value) {
-    //                         $(this).hide();
-    //                         $(this).removeClass('abc');
-    //                         $(this).addClass('hide');
-    //                     }
-    //                 }
-    //                 l++;
-    //             })
-    //             total_count();
-    //         }
-    //     })
-    //     $('#clear').click(function() {
-    //         var sum = 0;
-    //         $('#mode_select').val('all')
-    //         $('#agent_select').val('all')
-    //         $('#date_select').val('all')
-    //         $('.table > tbody > tr').show();
-    //         $('.table > tbody > tr').addClass('abc');
-    //         $(this).hide();
-    //         total_count();
-    //     })
-    // })
-    // </script>
-    // <script>
-    // function total_count() {
-    //     var i = 0;
-    //     var total = 0;
-    //     $('.abc').each(function() {
-    //         total += parseFloat($(this).attr('data-price'));
-    //         $('#sum').html(total)
-    //         i++;
-    //     })
-    // }
-    // </script>
+    <script>
+    $(function() {
+        total_count();
+        $('#mode_select').change(function() {
+            mode = 0;
+            j = 0;
+            var value = $(this).val();
+            $('#clear').show();
+            if(value == "all") {
+                $('.table > tbody > tr').show();
+                total_count();
+            }
+            else {
+                $('tr').each(function() {
+                    if(j > 0) {
+                        if($(this).attr('data-mode') != value) {
+                            $(this).hide();
+                            $(this).removeClass('abc');
+                            $(this).addClass('hide');
+                        }
+                    }
+                    j++;
+                })
+            }
+            total_count();
+        })
+        $('#agent_select').change(function() {
+            agent = 0;
+            k = 0;
+            var value = $(this).val();
+            $('#clear').show();
+            if(value == "all") {
+                $('.table > tbody > tr').show();
+                total_count();
+            }
+            else {
+                $('tr').each(function() {
+                    if(k > 0) {
+                        if($(this).attr('data-name') != value) {
+                            $(this).hide();
+                            $(this).removeClass('abc');
+                            $(this).addClass('hide');
+                        }
+                    }
+                    k++;
+                })
+                total_count();
+            }
+        })
+        $('#date_select').change(function() {
+            date = 0;
+            l = 0;
+            var value = $(this).val();
+            $('#clear').show();
+            if(value == "all") {
+                $('.table > tbody > tr').show();
+                total_count();
+            }
+            else {
+                $('tr').each(function() {
+                    if(l > 0) {
+                        if($(this).attr('data-date') != value) {
+                            $(this).hide();
+                            $(this).removeClass('abc');
+                            $(this).addClass('hide');
+                        }
+                    }
+                    l++;
+                })
+                total_count();
+            }
+        })
+        $('#clear').click(function() {
+            var sum = 0;
+            $('#mode_select').val('all')
+            $('#agent_select').val('all')
+            $('#date_select').val('all')
+            $('.table > tbody > tr').show();
+            $('.table > tbody > tr').addClass('abc');
+            $(this).hide();
+            total_count();
+        })
+    })
+    </script>
+    <script>
+    function total_count() {
+        var i = 0;
+        var total = 0;
+        $('.abc').each(function() {
+            total += parseFloat($(this).attr('data-price'));
+            $('#sum').html(total)
+            i++;
+        })
+    }
+    </script>
 {% endblock %}
