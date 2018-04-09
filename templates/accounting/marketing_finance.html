@@ -10,30 +10,32 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Leaderboard</h4>
+                                <div id="myHeader" class="card-header" data-background-color="purple">
+                                    <h4 class="title">Marketing Finance</h4>
                                     <p class="category">See where you stand</p>
+                                    <div style="margin-top:-3%;font-size:1.2em;font-weight:bold;float:right;color:white;">Total : <span id="sum"></span></div>
                                 </div>
-                                <select id="agent_select">
-                                    <option value="all" selected>All</option>
+                                <div class="content">
+                                <select id="agent_select" class="col-md-3 styled-select">
+                                    <option value="all" selected>Agent</option>
                                     {% for agent in agents %}
                                     {{agent}}
                                     <option value="{{agent}}">{{agent}}</option>
                                     {% endfor %}
                                 </select>
-                                <select id="date_select">
-                                    <option value="all" selected>All</option>
+                                <select id="date_select" class="col-md-3 styled-select">
+                                    <option value="all" selected>Date</option>
                                     {% for dt in dates %}
                                     <option value="{{dt}}">{{dt}}</option>
                                     {% endfor %}
                                 </select>
                                 </select>
-                                <select id="mode_select">
-                                    <option value="all" selected>All</option>
+                                <select id="mode_select" class="col-md-3 styled-select">
+                                    <option value="all" selected>Mode Of Payment</option>
                                     <option value="cash">Cash</option>
                                     <option value="paytm">Paytm</option>
                                 </select>
-                                <button id="clear" style="display:none;" type="button">Clear</button>
+                                <button id="clear" class="btn btn-primary" style="margin-left:3%;display:none;" type="button">Clear</button>
                                 <div class="card-content table-responsive">
                                     <table class="table table">
                                         <thead class="text-primary">
@@ -55,8 +57,8 @@
                                             {% endfor %}
                                         </tbody>
                                     </table>
-                                    <div id="sum"></div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -137,14 +139,7 @@
             }
         })
         $('#clear').click(function() {
-            var sum = 0;
-            $('#mode_select').val('all')
-            $('#agent_select').val('all')
-            $('#date_select').val('all')
-            $('.table > tbody > tr').show();
-            $('.table > tbody > tr').addClass('abc');
-            $(this).hide();
-            total_count();
+            location.reload();
         })
     })
     </script>
@@ -159,4 +154,17 @@
         })
     }
     </script>
+    <script>
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+</script>
 {% endblock %}
