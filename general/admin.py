@@ -47,6 +47,6 @@ class RegistrationAdmin(admin.ModelAdmin):
     '''
     list_display = ('event', 'payment', 'agent')
     list_filter = ('date_created','payment', 'agent')
-    search_fields = ('agent','event',)
+    search_fields = ('event__name',)
 
 admin.site.register(Registration, RegistrationAdmin)
