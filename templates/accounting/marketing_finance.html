@@ -35,6 +35,12 @@
                                     <option value="cash">Cash</option>
                                     <option value="paytm">Paytm</option>
                                 </select>
+                                <select id="event_select" class="col-md-3 styled-select">
+                                    <option value="all" selected>Event</option>
+                                    {% for registration in registrations %}
+                                    <option value="{{registration.event.name}}">{{registration.event.name}}</option>
+                                    {% endfor %}
+                                </select>
                                 <button id="clear" class="btn btn-primary" style="margin-left:3%;display:none;" type="button">Clear</button>
                                 <div class="card-content table-responsive">
                                     <table class="table table">
@@ -47,7 +53,7 @@
                                         </thead>
                                         <tbody>
                                             {% for reg in registrations %}
-                                            <tr class="abc" data-name="{{reg.agent.first_name}}" data-date="{{reg.date_created}}" data-mode="{{reg.payment}}" data-price="{{reg.event.price}}">
+                                            <tr class="abc" data-event="{{reg.event.name}}" data-name="{{reg.agent.first_name}}" data-date="{{reg.date_created}}" data-mode="{{reg.payment}}" data-price="{{reg.event.price}}">
                                                 <td>{{reg.date_created}}</td>
                                                 <td><span style="text-transform:capitalize;">{{reg.agent.first_name}}</span></td>
                                                 <td>{{reg.event.name}}</td>
@@ -134,6 +140,29 @@
                         }
                     }
                     l++;
+                })
+                total_count();
+            }
+        })
+        $('#event_select').change(function() {
+            event = 0;
+            m = 0;
+            var value = $(this).val();
+            $('#clear').show();
+            if(value == "all") {
+                $('.table > tbody > tr').show();
+                total_count();
+            }
+            else {
+                $('tr').each(function() {
+                    if(m > 0) {
+                        if($(this).attr('data-event') != value) {
+                            $(this).hide();
+                            $(this).removeClass('abc');
+                            $(this).addClass('hide');
+                        }
+                    }
+                    m++;
                 })
                 total_count();
             }
