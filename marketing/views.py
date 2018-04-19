@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, TemplateView
 from django.urls import reverse_lazy
 from django.core.mail import send_mail, EmailMessage
 from django.http import HttpResponseRedirect
 from django.template import loader
 from django.contrib import messages
 
-from general.models import Registration
+
+from general.models import Registration, Event
 from .forms import RegistrationForm
 
 import urllib.parse as ap
@@ -69,3 +70,27 @@ class RegistrationView(CreateView):
 # 	send_mail(subject, email, "feedback@bmsit.in" , ['agrawala.1697@gmail.com',], fail_silently=False)
 
 # 	return HttpResponseRedirect(reverse_lazy('marketing_register'))
+
+class RegistraionListView(TemplateView):
+	template_name = "marketing/registrations_list.html"
+
+	def get_context_data(self, **kwargs):
+		context = super(RegistraionListView, self).get_context_data(**kwargs)
+		event = Event.objects.get(coordinator=self.request.user)
+		reg_list = Registration.objects.filter(event=event)
+		context = {'event': event, 'reg_list': reg_list}
+		return context
+
+
+
+
+
+
+
+
+
+
+
+
+
+

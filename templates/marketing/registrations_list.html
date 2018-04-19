@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+           {% include "partials/navbar.html" %}
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">{{ event.name }} Registration List</h4>
+                                    <p class="category">Participant's List</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table">
+                                        <thead class="text-primary">
+                                        	<th>Sl. No.</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>College</th>
+                                            <th>Attended</th>
+                                            <th>Code</th>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in reg_list %}
+                                            <tr>
+                                                <td>{{forloop.counter}}</td></td>
+                                                <td><span style="text-transform:capitalize;">{{i.name}}</span></td>
+                                                <td>{{i.email}}</td>
+                                                <td>{{i.phone_no}}</td>
+                                                <td>{{i.college}}</td>
+                                                <td>{%if i.is_attended%} YES {% else %} NO {% endif %}</td>
+                                                <td>{{i.code}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
