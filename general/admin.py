@@ -45,7 +45,7 @@ class RegistrationAdmin(admin.ModelAdmin):
     '''
         Admin View for Registration
     '''
-    list_display = ('event', 'payment', 'agent')
+    list_display = ('event', 'name', 'email', 'phone_no')
     list_filter = ('date_created','payment', 'agent')
     search_fields = ('event__name',)
 
