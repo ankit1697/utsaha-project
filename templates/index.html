@@ -1,0 +1,528 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Utsaha | BMSIT</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/fontawesome-all.min.css' %}">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/swiper.min.css' %}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-10 col-lg-4">
+                        <h1 class="site-branding flex">
+                            <a href="#">Utsaha</a>
+                        </h1>
+                    </div>
+
+                    <div class="col-2 col-lg-8">
+                        <nav class="site-navigation">
+                            <div class="hamburger-menu d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!-- .hamburger-menu -->
+
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="#">UTSAHA 2018</a></li>
+                                <li><a href="#">ARTISTS</a></li>
+                                <li><a href="#">BLOG</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                            </ul><!-- flex -->
+                        </nav><!-- .site-navigation -->
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- container-fluid -->
+        </div><!-- header-bar -->
+    </header><!-- .site-header -->
+
+    <div class="hero-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-lg-2 col-lg-10">
+                    <div class="entry-header">
+                        <h2>Utsaha</h2>
+
+<!--                         <div class="entry-meta-date">
+                            10.05.019
+                        </div> --><!-- .entry-meta-date -->
+                    </div><!-- .entry-header -->
+
+                    <div class="countdown flex flex-wrap justify-content-between" data-date="2019/05/06">
+                        <div class="countdown-holder">
+                            <div class="dday"></div>
+                            <label>Days</label>
+                        </div><!-- .countdown-holder -->
+
+                        <div class="countdown-holder">
+                            <div class="dhour"></div>
+                            <label>Hours</label>
+                        </div><!-- .countdown-holder -->
+
+                        <div class="countdown-holder">
+                            <div class="dmin"></div>
+                            <label>Minutes</label>
+                        </div><!-- .countdown-holder -->
+
+                        <div class="countdown-holder">
+                            <div class="dsec"></div>
+                            <label>Seconds</label>
+                        </div><!-- .countdown-holder -->
+                    </div><!-- .countdown -->
+                </div><!-- .col-12 -->
+            </div><!-- row -->
+
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="entry-footer">
+                        <a href="#" class="btn">Buy Tickets</a>
+                        <a href="#" class="btn current">See Lineup</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .container -->
+    </div><!-- .hero-content -->
+
+    <div class="homepage-next-events">
+
+            <div class="container">
+            <div class="entry-title">
+                            <p>UTSAHA</p>
+                            <h2>Over The Years</h2>
+                        </div><!-- entry-title -->
+                    </div>
+  <div class="timeline">
+    <div class="timeline-nav">
+      <div class="timeline-nav__item">2018</div>
+      <div class="timeline-nav__item">2017</div>
+      <div class="timeline-nav__item">2016</div>
+      <div class="timeline-nav__item">2015</div>
+      <div class="timeline-nav__item">2014</div>
+    </div>
+    <div class="timeline-wrapper">
+      <div class="timeline-slider">
+        <div class="timeline-slide" style="background-image: url({% static 'main/images/2k18.jpg' %});" data-year="2018">  
+            <span class="timeline-year current-color">2018</span>
+          <div class="timeline-slide__content">
+            <h4 class="timeline-title black-color">Utsaha '18</h4>
+            <p class="timeline-text">FilmFair<br>
+                <a style="float:right;" class="btn current-color mt-2" href="{% url "year_2018" %}">Visit</a>
+            </p>
+          </div>
+        </div>
+        <div class="timeline-slide" style="background-image: url(https://unsplash.it/1920/600?image=12;" data-year="2017">      
+            <span class="timeline-year">2017</span>
+          <div class="timeline-slide__content">
+            <h4 class="timeline-title">Our first project</h4>
+            <p class="timeline-text">First project for the leading film actress Jamuna Barua, wife of Pramathesh Barua the legendary actor, director, and screenwriter</p>
+          </div>
+        </div>
+        <div class="timeline-slide" style="background-image: url(https://unsplash.it/1920/600?image=13);" data-year="2016">      <span class="timeline-year">2016</span>
+          <div class="timeline-slide__content">
+            <h4 class="timeline-title">Our nice super title</h4>
+            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="timeline-slide" style="background-image: url(https://unsplash.it/1920/600?image=13);" data-year="2015">      <span class="timeline-year">2015</span>
+          <div class="timeline-slide__content">
+            <h4 class="timeline-title">Our nice super title</h4>
+            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="timeline-slide" style="background-image: url(https://unsplash.it/1920/600?image=13);" data-year="2014">      <span class="timeline-year">2014</span>
+          <div class="timeline-slide__content">
+            <h4 class="timeline-title">Our nice super title</h4>
+            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lineup-artists-headline">
+                        <div class="entry-title">
+                            <p>JUST THE BEST</p>
+                            <h2>Main Highlights</h2>
+                        </div><!-- entry-title -->
+
+                        <div class="lineup-artists">
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src='{% static 'main/images/black-chick.jpg' %}' alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <div class="lineup-artists-description">
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            Jamila Williams
+                                        </div><!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
+                                        </div><!-- entry-content -->
+
+                                        <div class="box-link">
+                                            <a href=""><img src="{% static 'main/images/box.jpg' %}" alt=""></a>
+                                        </div><!-- box-link -->
+                                    </div><!-- lineup-artists-description-container -->
+                                </div><!-- lineup-artists-description -->
+                            </div><!-- lineup-artists-wrap -->
+
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <div class="lineup-artists-description">
+                                    <figure class="featured-image d-md-none">
+                                        <a href="#"> <img src="{% static 'main/images/mathew-kane.jpg' %}" alt=""> </a>
+                                    </figure><!-- featured-image -->
+
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            Sandra Superstar
+                                        </div><!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
+                                        </div><!-- entry-content -->
+
+                                        <div class="box-link">
+                                            <a href="#"><img src="{% static 'main/images/box.jpg' %}" alt=""></a>
+                                        </div><!-- box-link -->
+                                    </div><!-- lineup-artists-description-container -->
+                                </div><!-- lineup-artists-description -->
+
+                                <figure class="featured-image d-none d-md-block">
+                                    <a href="#"> <img src="{% static 'main/images/mathew-kane.jpg' %}" alt=""> </a>
+                                </figure><!-- featured-image -->
+                            </div><!-- lineup-artists-wrap -->
+
+                            <div class="lineup-artists-wrap flex flex-wrap">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/eric-ward.jpg' %}" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <div class="lineup-artists-description">
+                                    <div class="lineup-artists-description-container">
+                                        <div class="entry-title">
+                                            DJ Crazyhead
+                                        </div><!-- entry-title -->
+
+                                        <div class="entry-content">
+                                            <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
+                                        </div><!-- entry-content -->
+
+                                        <div class="box-link">
+                                            <a href="#"> <img src="{% static 'main/images/box.jpg' %}" alt=""></a>
+                                        </div><!-- box-link -->
+                                    </div><!-- lineup-artists-description-container -->
+                                </div><!-- lineup-artists-description -->
+                            </div><!-- lineup-artists-wrap -->
+                        </div><!-- lineup-artists -->
+                    </div><!-- lineup-artists-headline -->
+                </div><!-- col-12 -->
+            </div><!-- row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="the-complete-lineup">
+                        <div class="entry-title">
+                            <p>JUST THE BEST</p>
+                            <h2>Stars</h2>
+                        </div><!-- entry-title -->
+
+                        <div class="row the-complete-lineup-artists">
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-1.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Miska Smith</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-2.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Hayley Down</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-3.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>The Band Song</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="images/image-4.jpg" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Pink Machine</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-5.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Brasil Band</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-6.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Mickey</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-7.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>DJ Girl</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single">
+                                <figure class="featured-image">
+                                    <a href="#"> <img src="{% static 'main/images/image-8.jpg' %}" alt=""> </a>
+                                    <a href="#" class="box-link"> <img src="images/box.jpg" alt=""> </a>
+                                </figure><!-- featured-image -->
+
+                                <h2>Stan Smith</h2>
+                            </div><!-- artist-single -->
+                        </div><!-- the-complete-lineup-artists -->
+
+                        <div class="row justify-content-center">
+                            <div class="see-complete-lineup">
+                                <div class="entry-footer">
+                                    <a href="#" class="btn">See all lineup</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- the-complete-lineup -->
+                </div><!-- col-12 -->
+            </div><!-- row -->
+        </div><!-- container -->
+
+        <div class="homepage-next-events">
+        <div class="home-page-last-news">
+            <div class="container">
+                <div class="header">
+                    <div class="entry-title">
+                        <p>JUST THE BEST</p>
+                        <h2>Our Lastest News</h2>
+                    </div><!-- entry-title -->
+                </div><!-- header -->
+
+                <div class="home-page-last-news-wrap">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <figure class="featured-image">
+                                <a href="#"> <img src="{% static 'main/images/news-image-1.jpg' %}" alt="fesival+celebration"> </a>
+                            </figure><!-- featured-image -->
+
+                            <div class="box-link-date">
+                                <a href="#">03.12.18</a>
+                            </div>
+
+                            <div class="content-wrapper">
+                                <div class="entry-content">
+                                    <div class="entry-header">
+                                        <h2><a href="#">10 Festival Tips</a></h2>
+                                    </div><!-- entry-header -->
+
+                                    <div class="entry-meta">
+                                        <span class="author-name"><a href="#"> By UTSAHA TEAM</a></span>
+                                        <span class="space">|</span>
+                                    </div><!-- entry-meta -->
+
+                                    <div class="entry-description">
+                                        <p>Quisque at erat eu libero consequat tempus.
+                                            Quisque mole stie convallis tempus.
+                                            Ut semper purus metus, a euismod sapien sodales ac.
+                                            Duis viverra eleifend fermentum.</p>
+                                    </div><!-- entry-description -->
+                                </div><!-- entry-content -->
+                            </div><!-- content-wrapper -->
+                        </div><!-- .col-6 -->
+
+                        <div class="col-12 col-md-6">
+                            <figure class="featured-image">
+                                <a href="#"> <img src="{% static 'main/images/news-image-1.jpg' %}" alt="fesival+celebration"> </a>
+                            </figure><!-- featured-image -->
+
+                            <div class="box-link-date">
+                                <a href="">03.12.18</a>
+                            </div>
+
+                            <div class="content-wrapper">
+                                <div class="entry-content">
+                                    <div class="entry-header">
+                                        <h2><a href="#">New event calendar for this year</a></h2>
+                                    </div><!-- entry-header -->
+
+                                    <div class="entry-meta">
+                                        <span class="author-name"><a href="#">By James Williams</a></span>
+                                        <span class="space">|</span>
+                                        <span class="comments-count"><a href="#">3 comments</a></span>
+                                    </div><!-- entry-meta -->
+
+                                    <div class="entry-description">
+                                        <p>Quisque at erat eu libero consequat tempus.
+                                            Quisque mole stie convallis tempus.
+                                            Ut semper purus metus, a euismod sapien sodales ac.
+                                            Duis viverra eleifend fermentum.</p>
+                                    </div><!-- entry-description -->
+                                </div><!-- entry-content -->
+                            </div><!-- .content-wrapper -->
+                        </div><!-- col-6 -->
+                    </div><!-- row -->
+                </div><!-- home-page-last-news-wrap -->
+            </div><!-- container -->
+        </div><!-- home-page-last-news -->
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-cover-title flex justify-content-center align-items-center">
+            <h2>UTSAHA</h2>
+        </div><!-- .site-footer -->
+
+        <div class="footer-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="entry-title">
+                            <a href="#">UTSAHA</a>
+                        </div><!-- entry-title -->
+
+                        <div class="entry-mail">
+                            <a href="#">utsaha@bmsit.in</a>
+                        </div><!-- .entry-mail -->
+
+                        <div class="copyright-info">
+                            Powered by <a href="https://devxlabs.co" target="_blank">DevX</a>
+                        </div><!-- copyright-info -->
+
+                        <div class="footer-social">
+                            <ul class="flex justify-content-center align-items-center">
+                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div><!-- footer-social -->
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!-- footer-content-wrapper -->
+    </footer><!-- site-footer -->
+
+    
+    <script type='text/javascript' src="{% static 'main/js/masonry.pkgd.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/jquery.collapsible.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/swiper.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/jquery.countdown.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/circle-progress.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/jquery.countTo.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/custom.js' %}"></script>
+    <script type="text/javascript">
+        $(function(){
+   $('.timeline-nav').slick({
+      slidesToShow: 12,
+      slidesToScroll: 1,
+      asNavFor: '.timeline-slider',
+      centerMode: false,
+      focusOnSelect: true,
+       mobileFirst: true,
+      arrows: false,
+      infinite:false,
+       responsive: [
+           {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 5,
+           }
+          },
+         {
+          breakpoint: 0,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+          }
+        }
+     ]
+  });
+  
+   $('.timeline-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      asNavFor: '.timeline-nav',     
+      centerMode: true,     
+      cssEase: 'ease',
+       edgeFriction: 0.5,
+       mobileFirst: true,
+       speed: 500,
+       responsive: [
+         {
+          breakpoint: 0,
+          settings: {
+              centerMode: false
+          }
+        },
+           {
+          breakpoint: 768,
+          settings: {
+              centerMode: true
+          }
+        }
+     ]
+  });
+ 
+});
+
+    </script>
+        
+</body>
+</html>

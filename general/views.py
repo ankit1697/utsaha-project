@@ -44,3 +44,6 @@ class EventListView(TemplateView):
 	    events = Event.objects.filter(category=category)
 	    context['event_list'] = events
 	    return context
+
+class Year2018(TemplateView):
+	template_name = "year/2018.html"

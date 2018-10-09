@@ -8,4 +8,7 @@ urlpatterns = [
 	url(r'^dashboard/', views.DashboardView.as_view(), name="dashboard"),
     url(r'^event_scanner/', views.event_scanner, name="event_scanner"),
 	url(r'^event_attended/(?P<code>[\w\-]+)', views.event_attended, name="event_attended"),
+
+	url(r'^$', views.IndexView.as_view(), name="index"),
+	url(r'^year/2018', views.Year2018.as_view(), name="year_2018"),
 ]

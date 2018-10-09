@@ -1,0 +1,474 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Utsaha 2018 - Filmfair</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static "year/2018/style.css" %}">
+
+</head>
+
+<body>
+    <!-- ##### Preloader ##### -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="circle-preloader">
+            <img src="{% static "year/2018/img/core-img/compact-disc.png" %}" alt="">
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="musica-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="musicaNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand" style="color: white">Utsaha'18</a>
+
+                        
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center" data-duration="100ms">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url({% static 'year/2018/img/bg-img/bg-1.jpg' %});"></div>
+                <!-- Slide Content -->
+                <div class="hero-slides-content text-center">
+                    <h2 data-animation="fadeInUp" data-delay="100ms">Utsaha <span>Utsaha</span></h2>
+                    <p data-animation="fadeInUp" data-delay="300ms">2K18</p>
+                </div>
+                <!-- Big Text -->
+                <h2 class="big-text">Utsaha</h2>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url({% static 'year/2018/img/bg-img/bg-3.jpg' %});"></div>
+                <!-- Slide Content -->
+                <div class="hero-slides-content text-center">
+                    <h2 data-animation="fadeInUp" data-delay="100ms">Film <span>Film</span></h2>
+                    <p data-animation="fadeInUp" data-delay="300ms">Fair</p>
+                </div>
+                <!-- Big Text -->
+                <h2 class="big-text">FilmFair</h2>
+            </div>
+
+        </div>
+        <!-- bg gradients -->
+        <div class="bg-gradients"></div>
+
+        <!-- Slide Down -->
+        <div class="slide-down" id="scrollDown">
+            <h6>Slide Down</h6>
+            <div class="line"></div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <div class="about-us-area section-padding-100-0 bg-img bg-overlay" style="background-image: url({% static 'year/2018/img/bg-img/bg-4.jpg' %});" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Show Stopper</h2>
+                        <!-- <h6>Sed porta cursus enim, vitae maximus felis luctus iaculis.</h6> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- About Thumbnail -->
+                <div class="col-12 col-lg-6">
+                    <div class="about-thumbnail mb-100">
+                        <img src="{% static 'year/2018/img/bg-img/bg-5.jpg' %}" alt="">
+                    </div>
+                </div>
+                <!-- About Content -->
+                <div class="col-12 col-lg-6">
+                    <div class="about-content mb-100">
+                        <h4>Hold your breath for the <strong>Fashion Show</strong></h4>
+                        <p>Nulla pretium tincidunt felis, nec sollicitudin mauris lobortis in. Aliquam eu feugiat ligula, laoreet efficitur nulla. Morbi nec neque porta, elementum massa at, vehicula nunc. Nulla facilisi. Donec id purus eu lectus imperdiet varius. Curabitur consectetur nunc sem, vitae cursus enim tempor eget. Praesent pellentesque nisi urna, sit amet suscipit ligula posuere id. Aenean id tortor vel quam ornare gravida. Phasellus luctus feugiat nunc, quis vulputate ipsum convallis quis. Integer vel nulla erat. Donec erat metus, luctus quis maximus quis, volutpat eu tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        <img src="url({% static 'year/2018/img/core-img/signature.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### About Us Area End ##### -->
+
+    <!-- ##### Upcoming Shows Area Start ##### -->
+    <div class="upcoming-shows-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Upcoming Events</h2>
+                        <h6>Sed porta cursus enim, vitae maximus felis luctus iaculis.</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Upcoming Shows Content -->
+                    <div class="upcoming-shows-content">
+
+                        <!-- Single Upcoming Shows -->
+                        <div class="single-upcoming-shows d-flex align-items-center flex-wrap">
+                            <div class="shows-date">
+                                <h2>21 <span>April</span></h2>
+                            </div>
+                            <div class="shows-desc d-flex align-items-center">
+                                <div class="shows-img">
+                                    <img src="{% static 'year/2018/img/bg-img/s1.jpg' %}" alt="">
+                                </div>
+                                <div class="shows-name">
+                                    <h6>Electric castle Festival</h6>
+                                    <p>Cluj, Romania</p>
+                                </div>
+                            </div>
+                            <div class="shows-location">
+                                <p>At the Castle</p>
+                            </div>
+                            <div class="shows-time">
+                                <p>20:30</p>
+                            </div>
+                            <div class="buy-tickets">
+                                <a href="#" class="btn musica-btn">Register</a>
+                            </div>
+                        </div>
+
+                        <!-- Single Upcoming Shows -->
+                        <div class="single-upcoming-shows d-flex align-items-center flex-wrap">
+                            <div class="shows-date">
+                                <h2>21 <span>April</span></h2>
+                            </div>
+                            <div class="shows-desc d-flex align-items-center">
+                                <div class="shows-img">
+                                    <img src="{% static 'year/2018/img/bg-img/s2.jpg' %}" alt="">
+                                </div>
+                                <div class="shows-name">
+                                    <h6>Electric Festival</h6>
+                                    <p>Manhathan, NY, USA</p>
+                                </div>
+                            </div>
+                            <div class="shows-location">
+                                <p>Main Stadium</p>
+                            </div>
+                            <div class="shows-time">
+                                <p>21:30</p>
+                            </div>
+                            <div class="buy-tickets">
+                                <a href="#" class="btn musica-btn">Register</a>
+                            </div>
+                        </div>
+
+                        <!-- Single Upcoming Shows -->
+                        <div class="single-upcoming-shows d-flex align-items-center flex-wrap">
+                            <div class="shows-date">
+                                <h2>21 <span>April</span></h2>
+                            </div>
+                            <div class="shows-desc d-flex align-items-center">
+                                <div class="shows-img">
+                                    <img src="{% static 'year/2018/img/bg-img/s3.jpg' %}" alt="">
+                                </div>
+                                <div class="shows-name">
+                                    <h6>Sunflower festival</h6>
+                                    <p>Paris, France</p>
+                                </div>
+                            </div>
+                            <div class="shows-location">
+                                <p>Sunflower Arena</p>
+                            </div>
+                            <div class="shows-time">
+                                <p>20:30</p>
+                            </div>
+                            <div class="buy-tickets">
+                                <a href="#" class="btn musica-btn">Register</a>
+                            </div>
+                        </div>
+
+                        <!-- Single Upcoming Shows -->
+                        <div class="single-upcoming-shows d-flex align-items-center flex-wrap">
+                            <div class="shows-date">
+                                <h2>22 <span>April</span></h2>
+                            </div>
+                            <div class="shows-desc d-flex align-items-center">
+                                <div class="shows-img">
+                                    <img src="{% static 'year/2018/img/bg-img/s4.jpg' %}" alt="">
+                                </div>
+                                <div class="shows-name">
+                                    <h6>Electric castle Festival</h6>
+                                    <p>Cluj, Romania</p>
+                                </div>
+                            </div>
+                            <div class="shows-location">
+                                <p>At the Castle</p>
+                            </div>
+                            <div class="shows-time">
+                                <p>20:30</p>
+                            </div>
+                            <div class="buy-tickets">
+                                <a href="#" class="btn musica-btn">Register</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Upcoming Shows Area End ##### -->
+
+    <!-- ##### Music Player Area Start ##### -->
+    <div class="music-player-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="music-player-slides owl-carousel">
+
+                        <!-- Single Music Player -->
+                        <div class="single-music-player">
+                            <img src="{% static 'year/2018/img/bg-img/mp1.jpg' %}" alt="">
+
+                            <div class="music-info d-flex justify-content-between">
+                                <div class="music-text">
+                                    <h5>Artist’s/Band Name</h5>
+                                    <p>Love is all Around</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Music Player -->
+                        <div class="single-music-player">
+                            <img src="{% static 'year/2018/img/bg-img/mp2.jpg' %}" alt="">
+
+                            <div class="music-info d-flex justify-content-between">
+                                <div class="music-text">
+                                    <h5>Artist’s/Band Name</h5>
+                                    <p>Love is all Around</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Music Player -->
+                        <div class="single-music-player">
+                            <img src="{% static 'year/2018/img/bg-img/mp3.jpg' %}" alt="">
+
+                            <div class="music-info d-flex justify-content-between">
+                                <div class="music-text">
+                                    <h5>Artist’s/Band Name</h5>
+                                    <p>Love is all Around</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Music Player -->
+                        <div class="single-music-player">
+                            <img src="{% static 'year/2018/img/bg-img/mp4.jpg' %}" alt="">
+
+                            <div class="music-info d-flex justify-content-between">
+                                <div class="music-text">
+                                    <h5>Artist’s/Band Name</h5>
+                                    <p>Love is all Around</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Music Player Area End ##### -->
+
+    <!-- ##### Featured Album Area Start ##### -->
+    <div class="featured-album-area section-padding-100 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="featured-album-content d-flex flex-wrap">
+
+                        <!-- Album Thumbnail -->
+                        <div class="album-thumbnail h-100 bg-img" style="background-image: url({% static 'year/2018/img/bg-img/bg-4.jpg' %});"></div>
+
+                        <!-- Album Songs -->
+                        <div class="album-songs h-100">
+
+                            <!-- Album Info -->
+                            <div class="album-info mb-50 d-flex flex-wrap align-items-center justify-content-between">
+                                <div class="album-title">
+                                    <h6>Our Sponsors</h6>
+                                    <h4>Love is all Around</h4>
+                                </div>
+                                <div class="album-buy-now">
+                                    <a href="#" class="btn musica-btn">Buy it on Itunes</a>
+                                </div>
+                            </div>
+
+                            <div class="album-all-songs">
+
+                                <!-- Music Playlist -->
+                                <div class="music-playlist">
+                                    <!-- Single Song -->
+                                    <div class="single-music active">
+                                        <a href="javascript:void(0);" data-image="{% static 'year/2018/img/bg-img/bg-4.jpg' %}" class="change"><h6>Drop that beat</h6></a>
+                                        aslfnasl
+                                    </div>
+
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <a href="javascript:void(0);" data-image="{% static 'year/2018/img/bg-img/bg-3.jpg' %}" class="change"><h6>Hey, Mister Dj</h6></a>
+                                        aslfnasl
+                                    </div>
+
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <h6>Message to my future self</h6>
+                                        aslfnasl
+                                    </div>
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <h6>Drop that beat</h6>
+                                        aslfnasl
+                                    </div>
+
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <h6>Hey, Mister Dj</h6>
+                                        aslfnasl
+                                    </div>
+
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <h6>Message to my future self</h6>
+                                        aslfnasl
+                                    </div>
+
+                                    <!-- Single Song -->
+                                    <div class="single-music">
+                                        <h6>Bring back the love</h6>
+                                        aslfnasl
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Featured Album Area End ##### -->
+
+    <!-- ##### Music Artists Area Start ##### -->
+
+
+    <div class="musica-music-artists-area d-flex flex-wrap clearfix">
+        <div class="container">
+         <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>team</h2>
+                        <h6>People who made it possible.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Music Search -->
+        <div class="col-12">
+        <div class="music-search bg-img bg-overlay2 wow fadeInUp" data-wow-delay="300ms" style="background-image: url({% static 'year/2018/img/bg-img/bg-9.jpg' %});">
+            <!-- Content -->
+            <div class="music-search-content col-12">
+                <div class="row">
+                    <div class="col-3">
+                        <h4>Mayank Kushal</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Ankit Agrawal</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Rohit Singh</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Varun RS</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- ##### Music Artists Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area section-padding-100-0">
+        <div class="container-fluid">
+            <div class="row col-12 col-md-12 col-xl-12">
+                <div style="width:100%;" class="footer-widget-area">
+                    <center>
+                        <a href="#"><p style="font-family:'Allura'; font-size:5em;">Utsaha '18</p></a>
+                        <p class="copywrite-text"><a href="#">Powered by <a href="https://devxlabs.co" target="_blank">DevX</a></p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static "year/2018/js/jquery/jquery-2.2.4.min.js" %}"></script>
+    <!-- Popper js -->
+    <script src="{% static "year/2018/js/bootstrap/popper.min.js" %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static "year/2018/js/bootstrap/bootstrap.min.js" %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static "year/2018/js/plugins/plugins.js" %}"></script>
+    <!-- Active js -->
+    <script src="{% static "year/2018/js/active.js" %}"></script>
+
+    <script>
+        $(function() {
+            $('.change').each(function() {
+                $(this).click(function() {
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+                    var image = $(this).attr('data-image');
+                    $('.album-thumbnail').css('background-image', 'url(' + image + ')');
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
