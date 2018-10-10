@@ -11,4 +11,5 @@ urlpatterns = [
 
 	url(r'^$', views.IndexView.as_view(), name="index"),
 	url(r'^year/2018', views.Year2018.as_view(), name="year_2018"),
+	url(r'^year/2017', views.Year2017.as_view(), name="year_2017"),
 ]

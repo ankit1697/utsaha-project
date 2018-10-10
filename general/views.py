@@ -47,3 +47,7 @@ class EventListView(TemplateView):
 
 class Year2018(TemplateView):
 	template_name = "year/2018.html"
+
+
+class Year2017(TemplateView):
+	template_name = "year/2017.html"
